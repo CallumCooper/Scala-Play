@@ -1,7 +1,11 @@
 package models
-case class Product(
-                    ean: Long, name: String, description: String)
+
+// Model Class
+case class Product(ean: Long, name: String, description: String)
+
+// Data access object similar to a DB
 object Product {
+
   var products = Set(
     Product(5010255079763L, "Paperclips Large",
       "Large Plain Pack of 1000"),
@@ -14,5 +18,15 @@ object Product {
     Product(5018206244611L, "Zebra Paperclips",
       "Zebra Length 28mm Assorted 150 Pack")
   )
+
+  // Finder Function
   def findAll = products.toList.sortBy(_.ean)
+
+  // Find by the ean
+  def findByEan(ean : Long) = products.find(_.ean == ean)
+
+  // Add the product
+  def add(product : Product): Unit = {
+    products =  products + product // Save the new product
+  }
 }

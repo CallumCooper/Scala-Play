@@ -1,0 +1,29 @@
+@(productForm : Form[Product])(implicit flash : Flash, lang : Lang) <!-- Form Parameters -->
+
+<!-- Form helpers -->
+@import helper._
+@import play.api.Play.current
+@import play.api.i18n.Messages.Implicits._
+@import play.api.mvc.Flash
+
+@main(Messages("products.form")) {
+
+    <h2>@Messages("products.form")</h2>
+
+    <!-- Render a html form -->
+    @helper.form(action = routes.ProductsController.save()) {
+
+        <fieldset>
+            <legend>
+                @Messages("products.details", Messages("products.new"))
+            </legend>
+
+            <!-- Render input elements -->
+            @helper.inputText(productForm("ean"))
+            @helper.inputText(productForm("name"))
+            @helper.textarea(productForm("description"))
+        </fieldset>
+
+        <p><input type="submit" class="btn primary" value='@Messages("products.new.submit")'></p>
+    }
+}
