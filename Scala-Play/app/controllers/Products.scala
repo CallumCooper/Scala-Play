@@ -1,8 +1,6 @@
 package controllers
-
 import play.api.mvc.{Action, Controller}
 import models.Product
-import play.api.Play.current
 
 class Products extends Controller {
 

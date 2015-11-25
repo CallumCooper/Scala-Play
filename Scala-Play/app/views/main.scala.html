@@ -1,5 +1,4 @@
 @(title: String)(content: Html)(implicit flash: Flash, lang: Lang)
-<!-- Parameter List-->
 
 @import play.api.Play.current
 @import play.api.i18n.Messages.Implicits._
@@ -7,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>@title</title> <!-- Output title -->
+    <title>@title</title>
     <link rel="stylesheet" type="text/css" media="screen"
           href='@routes.Assets.at("stylesheets/bootstrap.css")'>
     <link rel="stylesheet" media="screen"
@@ -18,14 +17,13 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-
                 <a class="brand" href="@routes.Application.index()">
                     @Messages("application.name")
                 </a>
             </div>
         </div>
     </div>
-    <div class="container">  <!-- Output page content block-->
+    <div class="container">
         @content
     </div>
 </div>
