@@ -1,4 +1,4 @@
-name := """Login-DB"""
+name := """myblog"""
 
 version := "1.0-SNAPSHOT"
 
@@ -8,10 +8,10 @@ scalaVersion := "2.11.6"
 
 libraryDependencies ++= Seq(
   jdbc,
-  "com.typesafe.play" %% "anorm" % "2.4.0",
   cache,
   ws,
-  specs2 % Test
+  specs2 % Test,
+  "org.reactivemongo" %% "play2-reactivemongo" % "0.11.7.play24"
 )
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"

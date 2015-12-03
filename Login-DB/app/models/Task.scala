@@ -1,5 +1,8 @@
 package models
 
+import anorm._
+import anorm.SqlParser._
+
 /**
   * Created by callumcooper on 02/12/2015.
   */
