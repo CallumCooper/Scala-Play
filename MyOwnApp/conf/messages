@@ -1,0 +1,4 @@
+application.name = Employees Database
+
+employees.new.command = Add a New Employee
+employees.list.navigation = List of Employees
