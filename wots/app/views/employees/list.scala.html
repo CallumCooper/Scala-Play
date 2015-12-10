@@ -1,0 +1,14 @@
+@(employees : List[Employee])(implicit flash : Flash, lang : Lang)
+
+@import play.api.Play.current
+@import play.api.i18n.Messages.Implicits._
+
+@template(Messages("application.name")) {
+
+<dl class="products">
+    @for(employee <- employees) {
+    <dt>@employee.username</dt>
+    <dd>@employee.password</dd>
+    }
+</dl>
+}

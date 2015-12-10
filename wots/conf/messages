@@ -1,0 +1,3 @@
+application.name = Warehouse Order Tracking Application
+
+employee.new.command = New Employee
