@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<div lang="en">
     <head>
         <title>@title</title>
 
@@ -16,8 +16,33 @@
     </head>
     <body>
 
-    <!-- All content goes here !!-->
-    </nav>
-        @content
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Customer Orders</a></li>
+                    <li role="presentation"><a href="#">Stock Delivery Orders</a></li>
+                    <li role="presentation"><a href="#">Warehouse Layout</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Warehouse Order Tracking Application</h3>
+
+            <hr>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Login</h1>
+            <p class="lead">
+
+                <!-- All content goes here !!-->
+                </nav>
+                @content
+
+            </p>
+            <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        </div>
+    </div>
     </body>
 </html>
